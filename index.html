@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에이블 비행기 게임</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        #airplane {
+            position: absolute;
+            width: 80px;
+            height: 80px;
+        }
+        .red-circle-container {
+            position: absolute;
+            left: 10px;
+        }
+        .red-circle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: red;
+            animation: moveRedCircle 5s linear infinite;
+        }
+        @keyframes moveRedCircle {
+            from { top: -20px; }
+            to { top: 400vh; }
+        }
+    </style>
+</head>
+<body>
+    <img id="airplane" src="airplane.png" alt="Airplane">
+    <div class="red-circle-container"></div>
+    <script src="game.js"></script>
+</body>
+</html>
